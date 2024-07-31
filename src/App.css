@@ -1,0 +1,143 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color:rgb(39, 37, 37);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.ipos
+{
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  margin-left: 6px;
+
+}
+.buttons
+{
+  
+  height:60px;
+  width: 70px;
+  
+  border: none;
+  margin-left: 6px;
+  border-radius: 65px;
+
+}
+.buttons:hover
+{
+  cursor: pointer;
+  transition: 0.2,color 1s;
+  opacity: 0.3;
+  box-shadow:cornflowerblue;
+}
+
+.pic-container {
+  
+  display:flex;
+  justify-content: center; 
+  align-items: center; 
+  position: fixed; 
+  bottom: 0;
+    width: 100%;
+  background-color: #f8f9fa; 
+ padding-bottom: 10px;
+}
+
+.pictures-container img {
+  margin: 0 10px; /* Optional: Add space between images */
+  max-height: 100px; /* Optional: Limit the height of the images */
+}
+
+
+
+/* for profile button */
+.profile-button {
+  background-color: aqua;
+  height: 80px;
+  width: 80px;
+
+  border-style: solid;
+  color: aqua;
+  align-items: flex-end;
+  border: none;
+  margin-left: 100px;
+  border-radius: 65px;
+  position: absolute;
+  top: 6px;
+  right: 30px;
+  margin-top: 10px;
+  z-index: 0;
+  border-radius: 40px;
+}
+
+.profile-button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100px;
+  background-color: black;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.profile-button::before {
+  content: "";
+  background: linear-gradient(90deg, red, tomato, yellow, green, darkgreen, blue, violet, pink);
+  animation: glowing 20s linear infinite;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-size: 600%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: calc(100%+4px);
+  height: calc(100%+4px);
+  filter: blur(5px);
+  border-radius: 110px;  
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.profile-button:hover::before {
+  opacity: 1;
+}
+
+.profile-button:active::after {
+  background: transparent;
+}
+
+.profile-button:active {
+  color: black;
+}
+
+
+.pardhu-pic
+{
+  width: 80px;
+  border-radius: 50px;
+  position: fixed;
+  top:15px;
+  right:32.3px;
+  object-fit: cover;
+}
+
+.heading{
+  margin-left: 500px;
+  left: 20px;
+  color: aqua;
+}

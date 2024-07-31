@@ -1,0 +1,11 @@
+.pic-container
+{
+   display: block;
+   border-radius: 25px;
+   padding-bottom: 10px;
+   background-color: aqua;
+   margin-left: 3px;
+   width: auto;
+   bottom: 0%;
+
+}
